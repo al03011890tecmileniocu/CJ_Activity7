@@ -32,7 +32,7 @@ public class NumerosPrimosFibonacci {
         this.valor = valor;
     }
  
-    // Método para calcular los números primos
+    // Metodo para calcular los numeros primos
     public int[] calcularPrimos() {
         int[] primos = new int[valor];
         int count = 0;
@@ -52,41 +52,41 @@ public class NumerosPrimosFibonacci {
         return primos;
     }
  
-     // Método para calcular la sucesión de Fibonacci
-    public int[] calcularFibonacci() {
-        int[] fibonacci = new int[valor];
-        fibonacci[0] = 0;
-        fibonacci[1] = 1;
-        for (int i = 2; i < valor; i++) {
-            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-        }
-        return fibonacci;
+     // Metodo para calcular la sucesion de Fibonacci
+     public int[] calcularFibonacci() {
+         int[] fibonacci = new int[valor];
+         fibonacci[0] = 0;
+         fibonacci[1] = 1;
+         for (int i = 2; i < valor; i++) {
+             fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+         }
+         return fibonacci;
      }
  
-     // Método para imprimir los resultados
+     // Metodo para imprimir los resultados
      public void imprimirResultados(int[] primos, int[] fibonacci) {
-        System.out.println("Números primos:");
-        imprimirArray(primos);
-        System.out.println("\nSucesión de Fibonacci:");
-        imprimirArray(fibonacci);
+         System.out.println("Numeros primos:");
+         imprimirArray(primos);
+         System.out.println("\nSucesion de Fibonacci:");
+         imprimirArray(fibonacci);
      }
  
-     // Método auxiliar para imprimir un arreglo
-    private void imprimirArray(int[] arr) {
-        System.out.print("* ");
-        for (int i = 0; i < valor; i++) {
-            if (arr[i] != 0) {
-                System.out.print(arr[i]);
-                if (i < valor - 1 && arr[i + 1] != 0) {
-                    System.out.print(", ");
-                }
-            }
+     // Metodo auxiliar para imprimir un arreglo
+     private void imprimirArray(int[] arr) {
+         System.out.print("* ");
+         for (int i = 0; i < valor; i++) {
+             if (arr[i] != 0) {
+                 System.out.print(arr[i]);
+                 if (i < valor - 1 && arr[i + 1] != 0) {
+                     System.out.print(", ");
+                 }
+             }
         }
         System.out.println(" ...");
     }
  
     public static void main(String[] args) {
-        int n = 10; // Cambia este valor según necesites
+        int n = 10; // Cambia este valor
         NumerosPrimosFibonacci npf = new NumerosPrimosFibonacci(n);
         int[] primos = npf.calcularPrimos();
         int[] fibonacci = npf.calcularFibonacci();
